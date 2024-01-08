@@ -40,4 +40,6 @@ To get started with this project:
 
 Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository, make your changes, and submit a pull request.
 
+## Architecture
+
 ![vision-ai](https://github.com/passadis/python-aivision/assets/53148138/b9f30db1-ecf0-479e-98c4-91c399066c0a)
