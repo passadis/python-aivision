@@ -1,4 +1,10 @@
-# Azure AI Vision Integration with Web App
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=azure,py,terraform,vscode" />
+  </a>
+</p>
+
+<h1 align="center">Azure AI Vision Integration with Web App</h1>
 
 ## Introduction
 
@@ -44,8 +50,3 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 
 ![vision-ai](https://github.com/passadis/python-aivision/assets/53148138/b9f30db1-ecf0-479e-98c4-91c399066c0a)
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=azure,py,terraform,vscode" />
-  </a>
-</p>
