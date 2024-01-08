@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload</title>
+    <link rel="stylesheet" href="/static/stylesupload.css">
+</head>
+<body>
+    <div id="nav-bar">
+        <a href="/" class="home-button">Home</a>
+        <a href="/browse" class="nav-button">Browse</a>
+    </div>
+    <div id="message-box">
+        <img src="/static/icon.png" alt="Upload Icon">
+        <p>Upload your video below:</p>
+    </div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div id="upload-btn-wrapper">
+            <button class="btn">Upload a Video</button>
+            <input type="file" name="file" accept="video/*" required onchange="updateStatus()" />
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="status"></div>
+
+    <script type="text/javascript">
+        function updateStatus() {
+            var fileInput = document.querySelector('input[type=file]');
+            var statusDiv = document.getElementById('status');
+            if (fileInput.files && fileInput.files[0]) {
+                statusDiv.innerHTML = 'File ready to upload: ' + fileInput.files[0].name;
+            }
+        }
+    </script>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

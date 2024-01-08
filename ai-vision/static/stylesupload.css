@@ -1,0 +1,68 @@
+body {
+    background-color: #add8e6;
+    color: #b22222;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.nav-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#message-box {
+    background-color: #ff6666;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message-box img {
+    width: 120px; /* Adjust the size as per your requirement */
+}
+
+#upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse our Videos</title>
+    <link rel="stylesheet" href="/static/stylesbrowse.css">
+</head>
+<body>
+    <div id="nav-bar">
+        <a href="/" class="home-button">Home</a>
+        <a href="/upload" class="nav-button">Upload</a>
+    </div>
+    <div id="big-box">
+        <h1>Browse the Videos</h1>
+        <div class="video-list">
+            {% for video_url in video_urls %}
+                <div class="video-container">
+                    <video width="320" height="240" controls>
+                        <source src="{{ video_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <!-- Add a button to analyze the video -->
+                    <form action="/analyze" method="post">
+                        <input type="hidden" name="video_url" value="{{ video_url }}">
+                        <button type="submit">Analyze Video</button>
+                    </form>
+                    
+                    
+                    <!-- Display analyzed frame with bounding boxes (if it exists and pertains to this video) -->
+                    {% if analysis_results and analysis_results.analyzed_video_url == video_url %}
+                       <img src="{{ analysis_results.img_url }}" alt="Analyzed Frame" width="320">
+                       <ul>
+                        {% for detected_object in analysis_results.objects %}
+                        <li>{{ detected_object.label }} (Confidence: {{ detected_object.confidence }})</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

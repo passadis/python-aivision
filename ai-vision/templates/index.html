@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Video Library</title>
+    <link rel="stylesheet" href="/static/stylesindex.css">
+</head>
+<body>
+    <div id="box">
+        <img src="/static/icon1.png" id="icon" alt="Icon">
+        <h1>Welcome to the Video Library!</h1>
+        <button onclick="window.location.href='{{ url_for('upload') }}'">Upload Video</button>
+        <button onclick="window.location.href='{{ url_for('browse') }}'">Browse Videos</button>
+    </div>
+</body>
+</html>
