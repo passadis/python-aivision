@@ -7,4 +7,4 @@ azure-cognitiveservices-vision-face==0.5.0
 opencv-python==4.8.0.74
 msrest==0.7.0
 requests==2.31.0
-gunicorn==21.2.0 
+gunicorn==22.0.0 
