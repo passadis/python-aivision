@@ -1,5 +1,5 @@
 Flask==3.0.0
-azure-identity==1.7.0
+azure-identity==1.16.1
 azure-storage-blob==12.13.0
 python-dotenv==1.0.0
 azure-cognitiveservices-vision-computervision==0.9.0
