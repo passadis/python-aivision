@@ -4,7 +4,7 @@ azure-storage-blob==12.13.0
 python-dotenv==1.0.0
 azure-cognitiveservices-vision-computervision==0.9.0
 azure-cognitiveservices-vision-face==0.5.0
-opencv-python==4.8.0.74
+opencv-python==4.8.1.78
 msrest==0.7.0
 requests==2.32.0
 gunicorn==22.0.0 
